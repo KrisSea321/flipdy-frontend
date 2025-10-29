@@ -71,6 +71,7 @@ const Form = () => {
             await leadsApi.addContactLead(finalData);
             dispatch(clearFormDetail())
             toast.success("Message sent successfully!");
+            window.location.reload();
 
         } catch (error) {
             console.error("Error while adding lead:", error);
