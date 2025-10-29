@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+
+
+
+
+/* 🎨 Define brand colors & fonts here */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-primary: #1C75BC;
+  --color-primaryLight: #00AEEF;
+  --color-red: #DC2626;
+  --color-lightGrey: #F3F3F3;
+  --color-textColor: #333333;
+  --color-textColorDarkGrey: #666666;
+  --font-sans: "Poppins", sans-serif;
+  --font-heading: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+
+
+/* 🧩 Tailwind 4 theme variables */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--color-primary);
+  --color-primaryLight: var(--color-primaryLight);
+  --color-red: var(--color-red);
+  --color-lightGrey: var(--color-lightGrey);
+  --color-accent: var(--color-accent);
+  --color-textColor: var(--color-textColor);
+  --color-textColorDarkGrey: var(--color-textColorDarkGrey);
+
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+}
+
+/* 🌐 Global styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Optional reusable components */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition;
+  }
+}
+
+/* Optional reusable typography */
+@layer typography {
+  .semiboldHeadingBlack {
+    @apply text-textColor font-semibold text-[42px];
+  }
+
+  .normalSecondaryHeadingBlack {
+    @apply text-textColor text-[24px];
+  }
+
+  .normalTextGrey {
+    @apply text-textColorDarkGrey text-base;
+  }
+
+  .mediumText {
+    @apply text-textColor text-[18px];
+  }
+
+  .normalSemiboldTextBlack {
+    @apply text-textColor font-semibold text-base;
+  }
+
+  .smTextGrey {
+    @apply text-textColorDarkGrey text-sm;
+  }
+
+  .xsTextGrey {
+    @apply text-textColorDarkGrey text-xs;
+  }
+
+  .smTextBlack {
+    @apply text-textColor text-sm;
+  }
+}
+
+
+@theme inline {
+  --shadow-custom: 2px 2px 22px 0 rgba(51, 51, 51, 0.2);
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
