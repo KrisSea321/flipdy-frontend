@@ -28,7 +28,6 @@ function isTokenExpired(token: string) {
 axiosInstance.interceptors.request.use(
     (config) => {
         const token = Cookies.get("accessToken");
-        console.log("TOKEN", token);
 
         if (token) {
             if (isTokenExpired(token)) {

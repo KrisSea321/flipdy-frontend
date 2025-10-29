@@ -24,8 +24,6 @@ const Page = () => {
         setLoading(true)
         try {
             const response = await authService.login(data);
-            console.log("response", response);
-
             // store tokens in cookie
             Cookies.set("accessToken", response.accessToken);
             Cookies.set("refreshToken", response.refreshToken);

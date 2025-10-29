@@ -41,7 +41,6 @@ const UserDetail = createSlice({
     initialState: initialState,
     reducers: {
         saveFormDetail: (state, action) => {
-            console.log("SAVE FORM DETAILS", action.payload);
 
             // ✅ Merge instead of overwrite
             state.formDetails = {

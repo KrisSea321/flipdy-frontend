@@ -17,8 +17,6 @@ const Form = () => {
     const [quickBasicData, setQuickBasicData] = useState<QuickBasicFormValues>()
     const [helpNeedData, setHelpNeedData] = useState<FormDetailsValue>();
     const [loading, setLoading] = useState<boolean>(false);
-    console.log("quickBasicData", quickBasicData);
-    console.log("helpNeedData", helpNeedData);
     const dispatch = useDispatch()
     const tabs = [
         { href: 'quick-basics', name: 'Quick Basics' },
@@ -49,13 +47,11 @@ const Form = () => {
         if (activeState === 'submit') return 'Step 3 of 3'
     }
     const handleQuickBasicSubmit = (data: QuickBasicFormValues) => {
-        console.log("✅ Parent received Quick Basic data:", data)
         setQuickBasicData(data)
         setActiveState('help-need') // move to next step
     }
 
     const handleHelpNeedSubmit = (data: FormDetailsValue) => {
-        console.log("✅ Parent received Help Need data:", data);
         setHelpNeedData(data);
         setActiveState('submit');
     };
@@ -83,9 +79,7 @@ const Form = () => {
         } finally {
             setLoading(false)
         }
-        console.log("✅ Final data ready to send:", finalData);
     };
-    console.log("activeState", activeState);
 
 
     return (

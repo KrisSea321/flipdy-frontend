@@ -18,7 +18,7 @@ const QuickBasicForm = ({ onSubmitForm }: { onSubmitForm: (data: QuickBasicFormV
     const dispatch = useDispatch()
     const formData = useSelector((state: RootState) => state.FormDetails.formDetails)
     const addFun = (data: QuickBasicFormValues) => {
-        console.log("Child form data:", data)
+
         dispatch(saveFormDetail(data))
         onSubmitForm(data)
     }

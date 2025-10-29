@@ -31,7 +31,6 @@ const Faq = () => {
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? 0 : index);
     };
-    console.log(openIndex, typeof openIndex);
 
     return (
         <>

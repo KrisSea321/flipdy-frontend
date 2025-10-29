@@ -305,7 +305,6 @@ const HelpNeedForm = ({ onSubmitForm }: { onSubmitForm: (data: Partial<FormDetai
     const selectedFormType = useSelector(
         (state: RootState) => state.FormDetails.formDetails.helpType
     );
-    console.log("ACTIVETYPE", selectedForm);
 
     const handleSelect = (formName: string) => {
         // Toggle open/close same section
@@ -334,7 +333,6 @@ const HelpNeedForm = ({ onSubmitForm }: { onSubmitForm: (data: Partial<FormDetai
         | FormValuesShortTermBusinessForm
         | FormValuesPersonalLoanForm
         | FormValuesClientFinancingForm) => {
-        console.log("✅ Help Need form data:", data);
         if (selectedForm === "justNeedHelp") {
             dispatch(saveFormDetail({ helpType: selectedForm, justNeedHelp: data }))
             onSubmitForm({ helpType: selectedForm, justNeedHelp: data as FormValuesNeedHelpForm });

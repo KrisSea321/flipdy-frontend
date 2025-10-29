@@ -22,10 +22,8 @@ const Page = () => {
     const params = useParams()
 
     const id: string = Array.isArray(params?.id) ? params.id[0] : params?.id ?? "";
-    console.log("PARAMS:", id);
     const isModalOpen = useSelector((state: RootState) => state.ModalDetail.isModalOpen)
     const { data } = useGetLeadById(id);
-    console.log("DATA", data);
 
     const dispatch = useDispatch()
     const type = data?.helpType

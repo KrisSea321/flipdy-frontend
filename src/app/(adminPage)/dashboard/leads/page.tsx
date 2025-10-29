@@ -34,7 +34,6 @@ const Page = () => {
     const { data: leadsRes } = useGetAllLeads(currentPage, searchTerm);
 
     const leads = leadsRes?.data?.data || [];
-    console.log("LEAD RES", leads);
 
 
     // ✅ Transform leads before passing to Table
@@ -51,7 +50,7 @@ const Page = () => {
     const totalPages = leadsRes?.data?.totalPages || 1;
 
     const handleEditClick = (id: string) => {
-        console.log("Edit clicked, ID:", id);
+        console.log("Function not implemented");
     };
 
     const handleViewClick = (id: string) => {

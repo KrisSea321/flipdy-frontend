@@ -20,7 +20,6 @@ const SubmitForm = ({ onSubmitForm }: { onSubmitForm: (data: FormValues) => void
     const dispatch = useDispatch()
 
     const addFun = (data: FormValues) => {
-        console.log('✅ Child form data:', data)
         dispatch(saveFormDetail(data))
         onSubmitForm(data)
     }
