@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import React from 'react'
@@ -12,7 +13,7 @@ import { LeadType } from '@/app/types/LeadType'
 const CardData = () => {
 
 
-    const { data: leadsRes } = useGetAllLeadsWoPagination()
+    const { data: leadsRes } :any= useGetAllLeadsWoPagination()
 
     const totalContactLeads = leadsRes?.data?.data?.length || 0
 

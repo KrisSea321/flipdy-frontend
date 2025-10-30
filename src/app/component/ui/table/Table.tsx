@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import React from "react";
@@ -51,7 +52,7 @@ const Table: React.FC<TableProps> = ({
                             </tr>
                         </thead>
                         <tbody >
-                            {data.map((row, idx) => (
+                            {data.map((row:any, idx) => (
                                 <tr
                                     key={idx}
                                     className={`${idx % 2 !== 0 && "bg-[#F9FAFB]"} hover:bg-gray-50 text-xs border-b border-lightGrey border-x-0`}
